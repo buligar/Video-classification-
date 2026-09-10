@@ -290,18 +290,6 @@ should generally not be committed directly to a regular GitHub repository becaus
 
 ---
 
-# Synthetic Video Generation
-
-The repository also contains:
-
-```text
-Video_generator.py
-```
-
-This script demonstrates autoregressive video prediction using a simple synthetic dataset.
-
-The generated videos contain a white square moving inside a black frame and bouncing from image boundaries.
-
 ## Architecture
 
 The model combines a convolutional encoder, causal Transformer and convolutional decoder:
@@ -390,53 +378,6 @@ and the AdamW optimizer.
 | Transformer layers |       3 |
 | Learning rate      |  `3e-4` |
 
-## Autoregressive generation
-
-After training, the model receives several initial frames:
-
-```text
-frame 1
-frame 2
-frame 3
-frame 4
-frame 5
-```
-
-It predicts the next frame:
-
-```text
-frame 6
-```
-
-The predicted frame is then added to the input sequence and used to predict the following frame.
-
-This process is repeated recursively:
-
-```text
-context
-   ↓
-predict next frame
-   ↓
-append prediction
-   ↓
-predict next frame
-   ↓
-...
-```
-
-Run the experiment using:
-
-```bash
-python Video_generator.py
-```
-
-The best model is saved as:
-
-```text
-video_generator.pt
-```
-
----
 
 # Repository Structure
 
@@ -445,9 +386,6 @@ Video-classification-/
 │
 ├── Video_trans.py
 │   └── VideoMAE fine-tuning and HMDB51 classification
-│
-├── Video_generator.py
-│   └── Transformer-based synthetic video generation
 │
 ├── videomae_hmdb51_5classes/
 │   ├── evaluation results
