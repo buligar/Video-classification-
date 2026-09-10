@@ -1,0 +1,14 @@
+Accuracy: 0.820000
+Macro F1: 0.820252
+
+              precision    recall  f1-score   support
+
+        clap     0.9000    0.9000    0.9000        30
+        jump     1.0000    0.7667    0.8679        30
+         run     0.7778    0.9333    0.8485        30
+        walk     0.6944    0.8333    0.7576        30
+        wave     0.8000    0.6667    0.7273        30
+
+    accuracy                         0.8200       150
+   macro avg     0.8344    0.8200    0.8203       150
+weighted avg     0.8344    0.8200    0.8203       150
